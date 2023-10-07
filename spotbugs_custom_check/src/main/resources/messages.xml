@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MessageCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="messagecollection.xsd">
+
+  <Plugin>
+    <ShortDescription>My SpotBugs Plugin</ShortDescription>
+    <Details>This plugin provides original detectors</Details>
+  </Plugin>
+
+  <Detector class="org.example.ManualHypotDetector">
+    <Details>
+      Detector to catch manual hypot calculation.
+    </Details>
+  </Detector>
+
+  <BugPattern type="MATH_USE_HYPOT">
+    <ShortDescription>Use Math.hypot</ShortDescription>
+    <LongDescription>
+      Math.hypot must be used
+    </LongDescription>
+    <Details>
+<![CDATA[
+<p>Instead of using Math.sqrt(x*x+y*y), use Math.hypot</p>
+]]>
+    </Details>
+  </BugPattern>
+
+  <BugCode abbrev="MATH">Math problems</BugCode>
+</MessageCollection>

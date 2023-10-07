@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FindbugsPlugin xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="findbugsplugin.xsd"
+        pluginid="org.example.spotbugs_custom_check">
+
+        <Detector class="org.example.ManualHypotDetector" reports="MATH_USE_HYPOT" />
+
+        <BugPattern abbrev="MATH" type="MATH_USE_HYPOT" category="CORRECTNESS" />
+</FindbugsPlugin>
